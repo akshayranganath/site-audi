@@ -120,12 +120,12 @@ class DataCenter:
 		}
 
 	def printDataCenterDetails(self):
-		print json.dumps(self)
+		print ( json.dumps(self) )
 
 	
 if __name__=="__main__":
 	gtm = GtmWrapper()
 	#print gtm.getDomains()
-	print json.dumps(gtm.getSingleDomain( gtm.extractDomainName('https://akab-eyt7c2nuge444oiq-dhyxfhoxgujxsoji.luna.akamaiapis.net/config-gtm/v1/domains/aws-origin.akadns.net') ),indent=4,sort_keys=True)
+	print ( json.dumps(gtm.getSingleDomain( gtm.extractDomainName('https://akab-eyt7c2nuge444oiq-dhyxfhoxgujxsoji.luna.akamaiapis.net/config-gtm/v1/domains/aws-origin.akadns.net') ),indent=4,sort_keys=True) )
 	#print gtm.extractDomainName('https://akab-eyt7c2nuge444oiq-dhyxfhoxgujxsoji.luna.akamaiapis.net/config-gtm/v1/domains/aws-origin.akadns.net')
 	#print gtm.getDomainDataCenters( gtm.extractDomainName('https://akab-eyt7c2nuge444oiq-dhyxfhoxgujxsoji.luna.akamaiapis.net/config-gtm/v1/domains/gcs.akadns.net') )

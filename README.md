@@ -7,11 +7,18 @@ As part of Phase 1, we are targeting only [Propert Manager (PAPI)](https://devel
 ### Usage ###
 
 - In your ~/.edgerc file setup the credentials under the name __papi__
-- Ensure you have python 2.7 or up. This code is compatible with python 3.x as well
-
+- Ensure you have python 3.x. 
+- As a pre-installation step, please add the libraries that are required.
 ```bash
-python aggregator.py
+pip install -r requirements.txt
 ```
+
+To run the reports, simple issue this command:
+```bash
+python3 aggregator.py
+```
+
+Depending on the number of configurations you have, this report can take at least 30 minutes to execute. Assume that it'll need about an hour - so ensure that your machine does not sleep during the time to help complete the execution of the script.
 
 ### Output ###
 When this program is run, it will create a folder within the current directory under the name "Account_Name-Timestamp". Within this folder, following files will be created:
@@ -24,3 +31,13 @@ When this program is run, it will create a folder within the current directory u
 | hostnames.csv | This file pulls all the host names listed within the configurations. It will also list if the domain is CNAMED to Akamai and compare with the CNAME listed in the configuration |
 | origins.csv | This file will list all the unique origin names defined within the configurations. It will also segregate as *Customer origin* or *GTM Origin* |
 | properties.csv | This file will list all the properties associated with the account. For each property, it will list the following details: Property name, Current version in prod and staging, latest version and first version details. Finally, it lists all the behaviors seen in the config. |
+
+
+## GTM Report
+Within this script base is a code to generate a report about your GTM usage as well. To use this, simple issue a command as follows:
+
+```bash
+python3 gtm_report.py
+```
+
+The reports will be within a folder called _gtm_.
