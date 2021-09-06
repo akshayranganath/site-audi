@@ -9,7 +9,7 @@ ndg-httpsclient==0.4.3
 pkg-resources==0.0.0
 pyasn1==0.3.7
 pycparser==2.18
-pyOpenSSL==17.3.0
+pyOpenSSL==17.5.0
 requests==2.18.4
 six==1.11.0
 urllib3==1.22
